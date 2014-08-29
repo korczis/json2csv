@@ -10,15 +10,25 @@ require_relative '../../version'
 module Json2Csv
   # Apollon bootstrap module
   module Convert
+    DEFAULT_OPTIONS = {
+      :out_path => 'out.txt',
+      :delimiter => ','
+    }
+
     class << self
-      def convert(paths)
+      def convert(paths, opts = {})
         paths = [paths] unless paths.is_a?(Array)
         paths.each do |path|
           puts "Converting #{path}"
 
           json = load_file(path)
 
-          process(json, "#{path}.csv")
+          if(opts[:root])
+            json = json[opts[:root]]
+          end
+
+          real_opts =
+          process(json, DEFAULT_OPTIONS.merge(opts).merge(:out_path => "#{path}.csv"))
         end
       end
 
@@ -69,13 +79,18 @@ module Json2Csv
         File.open('error.txt', 'wt') { |f| f.write(e.to_s) }
       end
 
-      def process(json, out_path = 'out.txt')
+      def process(json, opts = DEFAULT_OPTIONS)
         keys = json.keys
 
         header = nil
 
+        out_path = opts[:out_path]
+        csv_opts = {
+          col_sep: opts[:delimiter] || DEFAULT_OPTIONS[:delimiter]
+        }
+
         # Open the CSV for write
-        CSV.open(out_path, 'wt') do |csv|
+        CSV.open(out_path, 'wt', csv_opts) do |csv|
           # Take each story - json['stories'][<ID_HERE>]
           keys.each do |key|
             obj = json[key]

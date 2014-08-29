@@ -15,8 +15,45 @@ gem install json2csv
 
 ## Usage
 
+**Simple conversion**
+
 ```
 json2csv convert data/sample.json
+
+```
+
+**Global help**
+
+```
+json2csv help
+NAME
+    json2csv - json2csv 0.0.3
+
+SYNOPSIS
+    json2csv [global options] command [command options] [arguments...]
+
+GLOBAL OPTIONS
+    --help - Show this message
+
+COMMANDS
+    convert - Convert json file
+    help    - Shows a list of commands or help for one command
+    version - Print version info
+```
+
+**Convert help**
+
+```
+json2csv help convert
+NAME
+    convert - Convert json file
+
+SYNOPSIS
+    json2csv [global options] convert [command options]
+
+COMMAND OPTIONS
+    -d, --delimiter=arg - (default: ,)
+    -r, --root=arg      - (default: none)
 ```
 
 ## Example
