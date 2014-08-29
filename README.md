@@ -22,7 +22,7 @@ json2csv convert data/sample.json
 ## Example
 
 
-*Input json*
+**Input json**
 
 ```
 cat data/sample.json
@@ -54,7 +54,7 @@ cat data/sample.json
 }
 ```
 
-*Convert json*
+**Convert json**
 
 ```
 ./bin/json2csv convert data/sample.json
@@ -62,7 +62,7 @@ Converting data/sample.json
 
 ```
 
-*Output json*
+**Output json**
 
 ```
 cat data/sample.json.csv
