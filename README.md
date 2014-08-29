@@ -12,3 +12,9 @@ Simple tool for converting JSON to CSV
 ```
 gem install json2csv
 ```
+
+## Usage
+
+```
+json2csv convert data/sample.json
+```
