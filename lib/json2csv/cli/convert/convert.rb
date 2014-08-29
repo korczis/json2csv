@@ -45,6 +45,7 @@ module Json2Csv
       def get_value(obj, path)
         segments = path.split('.')
         segments.each do |segment|
+          return nil if obj.nil?
           obj = obj[segment]
         end
         obj
