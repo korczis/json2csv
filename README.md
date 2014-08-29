@@ -47,7 +47,7 @@ cat data/sample.json
             "Street": "#111 Sutter St, 94104",
             "City": "San Francisco",
             "Details": {
-                "note": "Korean Close close main entrance"
+                "note": "Korean Deli near to main entrance"
             }
         }
     }
@@ -69,6 +69,6 @@ cat data/sample.json.csv
 
 id,Firstname,Lastname,Address.Street,Address.City,Address.Details.note
 12345,Joe,Doe,"#2140 Taylor Street, 94133",San Francisco,Pool available
-45678,Jack,Plumber,"#111 Sutter St, 94104",San Francisco,Korean Close close main entrance
+45678,Jack,Plumber,"#111 Sutter St, 94104",San Francisco,Korean Deli near to main entrance
 
 ```
