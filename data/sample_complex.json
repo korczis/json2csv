@@ -1,0 +1,37 @@
+{
+    "Addresses": {
+        "12345": {
+            "Firstname": "Joe",
+            "Lastname": "Doe",
+            "Address": {
+                "Street": "#2140 Taylor Street, 94133",
+                "City": "San Francisco",
+                "Details": {
+                    "note": "Pool available"
+                }
+            }
+        },
+
+        "45678": {
+            "Firstname": "Jack",
+            "Lastname": "Plumber",
+            "Address": {
+                "Street": "#111 Sutter St, 94104",
+                "City": "San Francisco",
+                "Details": {
+                    "note": "Korean Deli near to main entrance"
+                }
+            }
+        }
+    },
+
+    "Items": {
+        "ABC": {
+            "Name": "Apple"
+        },
+
+        "DEF": {
+            "Name": "Banana"
+        }
+    }
+}
