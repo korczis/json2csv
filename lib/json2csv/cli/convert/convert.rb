@@ -22,6 +22,34 @@ module Json2Csv
         end
       end
 
+      def get_keys(obj, prefix = nil)
+        keys = obj.keys
+        res = keys.map do |key|
+          val = obj[key]
+          sanitized_key = sanitize_key(key)
+          if val.is_a?(Hash)
+            full_prefix = prefix ? "#{prefix}.#{sanitized_key}" : sanitized_key
+            get_keys(val, full_prefix)
+          else
+            if prefix && !prefix.nil?
+              "#{prefix}.#{sanitized_key}"
+            else
+              sanitized_key
+            end
+          end
+        end
+
+        res.compact.flatten
+      end
+
+      def get_value(obj, path)
+        segments = path.split('.')
+        segments.each do |segment|
+          obj = obj[segment]
+        end
+        obj
+      end
+
       def load_file(path)
         # Load input file
         raw = IO.read(path)
@@ -41,11 +69,9 @@ module Json2Csv
       end
 
       def process(json, out_path = 'out.txt')
-        # json = json[json.keys.first]
-
         keys = json.keys
 
-        first = true # Flag indicating if we already written the "header"
+        header = nil
 
         # Open the CSV for write
         CSV.open(out_path, 'wt') do |csv|
@@ -53,20 +79,21 @@ module Json2Csv
           keys.each do |key|
             obj = json[key]
 
-            # Write header if needed
-            csv << obj.keys && first = false if first
+            if header.nil?
+              header = get_keys(obj)
+              csv << ['id'] + header
+            end
 
             # Write row to output CSV
-            csv << process_row(obj)
+            csv << process_row(obj, key, header)
           end
         end
       end
 
-      def process_row(obj)
-        # Create empty array containing all values from this object/row
-        obj.keys.map do |subkey|
+      def process_row(obj, id, header)
+        [id] + header.map do |subkey|
           # Assing value/attribute to temp variable
-          tmp = obj[subkey]
+          tmp = get_value(obj, subkey)
 
           # Make temp variable empty string if null
           tmp = '' if tmp.nil?
@@ -75,6 +102,10 @@ module Json2Csv
           tmp = tmp.gsub(/\n/, '') if tmp.is_a?(String)
           tmp
         end
+      end
+
+      def sanitize_key(key)
+        key
       end
     end
   end
