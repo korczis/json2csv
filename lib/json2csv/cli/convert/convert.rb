@@ -11,8 +11,8 @@ module Json2Csv
   # Apollon bootstrap module
   module Convert
     DEFAULT_OPTIONS = {
-      :out_path => 'out.txt',
-      :delimiter => ','
+      out_path: 'out.txt',
+      delimiter: ','
     }
 
     class << self
@@ -23,12 +23,10 @@ module Json2Csv
 
           json = load_file(path)
 
-          if(opts[:root])
-            json = json[opts[:root]]
-          end
+          json = json[opts[:root]] if opts[:root]
 
-          real_opts =
-          process(json, DEFAULT_OPTIONS.merge(opts).merge(:out_path => "#{path}.csv"))
+          tmp_opts = { out_path: "#{path}.csv" }
+          process(json, DEFAULT_OPTIONS.merge(opts).merge(tmp_opts))
         end
       end
 
