@@ -7,7 +7,7 @@ Simple tool for converting JSON to CSV
 [![Gem Version](https://badge.fury.io/rb/json2csv.svg)](http://badge.fury.io/rb/json2csv)
 [![Build Status](https://travis-ci.org/korczis/json2csv.svg)](https://travis-ci.org/korczis/json2csv)
 [![Code Climate](https://codeclimate.com/github/korczis/json2csv/badges/gpa.svg)](https://codeclimate.com/github/korczis/json2csv)
-[![Code Climate](https://codeclimate.com/github/korczis/json2csv/badges/gpa.svg)](https://codeclimate.com/github/korczis/json2csv)
+[![Dependency Status](https://gemnasium.com/korczis/json2csv.svg)](https://gemnasium.com/korczis/json2csv)
 [![Coverage Status](https://coveralls.io/repos/korczis/json2csv/badge.png)](https://coveralls.io/r/korczis/json2csv)
 
 ## Getting started 
