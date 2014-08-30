@@ -72,7 +72,7 @@ cat data/sample.json
             "Street": "#2140 Taylor Street, 94133",
             "City": "San Francisco",
             "Details": {
-                "note": "Pool available"
+                "Note": "Pool available"
             }
         }
     },
@@ -84,27 +84,27 @@ cat data/sample.json
             "Street": "#111 Sutter St, 94104",
             "City": "San Francisco",
             "Details": {
-                "note": "Korean Deli near to main entrance"
+                "Note": "Korean Deli near to main entrance"
             }
         }
     }
 }
 ```
 
-**Convert json**
+**Convert JSON**
 
 ```
-./bin/json2csv convert data/sample.json
+json2csv convert data/sample.json
 Converting data/sample.json
 
 ```
 
-**Output json**
+**Output CSV**
 
 ```
 cat data/sample.json.csv
 
-id,Firstname,Lastname,Address.Street,Address.City,Address.Details.note
+id,Firstname,Lastname,Address.Street,Address.City,Address.Details.Note
 12345,Joe,Doe,"#2140 Taylor Street, 94133",San Francisco,Pool available
 45678,Jack,Plumber,"#111 Sutter St, 94104",San Francisco,Korean Deli near to main entrance
 

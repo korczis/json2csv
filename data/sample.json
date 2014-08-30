@@ -6,7 +6,7 @@
             "Street": "#2140 Taylor Street, 94133",
             "City": "San Francisco",
             "Details": {
-                "note": "Pool available"
+                "Note": "Pool available"
             }
         }
     },
@@ -18,7 +18,7 @@
             "Street": "#111 Sutter St, 94104",
             "City": "San Francisco",
             "Details": {
-                "note": "Korean Deli near to main entrance"
+                "Note": "Korean Deli near to main entrance"
             }
         }
     }
