@@ -1,6 +1,6 @@
 # json2csv
 
-Simple tool for converting JSON to CSV
+Easy to use tool for converting JSON to CSV
 
 ## Status
 
