@@ -5,7 +5,7 @@ require 'multi_json'
 require 'pathname'
 require 'pp'
 
-require_relative '../../version'
+require_relative '../version'
 
 module Json2Csv
   # Apollon bootstrap module

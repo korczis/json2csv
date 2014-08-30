@@ -5,7 +5,7 @@ require 'gli'
 include GLI::App
 
 require_relative '../shared'
-require_relative '../convert/convert'
+require_relative '../../convert/convert'
 
 desc 'Convert json file'
 command :convert do |c|

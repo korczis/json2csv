@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.name = 'json2csv'
   s.version = Json2Csv::VERSION
   s.summary = 'Simple tool for converting json2csv'
-  s.description = 'Quick and Dirty - No time to waste time'
+  s.description = 'JSON to CSV conversion tool with user friendly CLI'
   s.authors = [
     'Tomas Korcak'
   ]
@@ -31,7 +31,6 @@ Gem::Specification.new do |s|
 
   s.add_development_dependency 'coveralls', '~> 0.7', '>= 0.7.0r'
   s.add_development_dependency 'rspec', '~> 3.0', '>= 3.0.0'
-  # s.add_development_dependency 'ruby-debug-ide' if RUBY_VERSION >= '2.1'
   s.add_development_dependency 'rubocop', '~> 0.24', '>= 0.24.0'
   s.add_development_dependency 'simplecov', '~> 0.8', '>= 0.8.2'
 end
