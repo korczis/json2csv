@@ -1,6 +1,6 @@
 *.box
 .idea/
-.json.csv
+*.json.csv
 .vagrant/
 
 Gemfile.lock
