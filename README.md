@@ -98,7 +98,7 @@ cat data/sample.json
 **Convert json**
 
 ```
-./bin/json2csv convert data/sample.json
+json2csv convert data/sample.json
 Converting data/sample.json
 
 ```
