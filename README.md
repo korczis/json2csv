@@ -23,13 +23,13 @@ gem install json2csv
 
 ```
 json2csv convert data/sample.json
-
 ```
 
 **Global help**
 
 ```
 json2csv help
+
 NAME
     json2csv - json2csv 0.0.3
 
@@ -49,6 +49,7 @@ COMMANDS
 
 ```
 json2csv help convert
+
 NAME
     convert - Convert json file
 
@@ -63,7 +64,7 @@ COMMAND OPTIONS
 ## Example
 
 
-**Input json**
+**Input JSON**
 
 ```
 cat data/sample.json
