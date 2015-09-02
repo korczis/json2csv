@@ -25,7 +25,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency 'gli', '~> 2.11', '>= 2.11.0'
   s.add_dependency 'json_pure', '~> 1.8.1'
-  s.add_dependency 'multi_json', '~> 1.10.0'
+  s.add_dependency 'multi_json', '>= 1.10.0'
   s.add_dependency 'rake', '~> 10.3', '>= 10.3.2'
   s.add_dependency 'terminal-table', '~> 1.4', '>= 1.4.5'
 
